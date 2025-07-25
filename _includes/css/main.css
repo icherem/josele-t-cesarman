@@ -484,30 +484,19 @@ footer .footer-below {
 }
 
 /* change size when clicked */
-/* Make modal container bigger */
-.modal-dialog {
-  max-width: 95vw;
-  width: auto;
-  height: auto;
-  max-height: 95vh;
-  margin: 30px auto;
-}
-
-/* Modal content fills modal-dialog */
 .portfolio-modal .modal-content {
-  height: auto;
-  max-height: 95vh;
-  padding: 20px 40px 40px;
-  overflow: hidden;
+  max-width: 90vw;
+  max-height: 90vh;
+  margin: 5vh auto;
+  overflow: auto;
   text-align: center;
+  padding: 30px;
 }
 
-/* Image fills as much space as possible inside modal */
 .modal-image {
   max-width: 100%;
-  max-height: 90vh;
+  max-height: 80vh;
   height: auto;
-  margin: 0 auto;
-  display: block;
   object-fit: contain;
+  display: inline-block;
 }
