@@ -485,19 +485,16 @@ footer .footer-below {
 
 
 
-
-/* Make modal wider to show bigger images */
 .modal-dialog {
-  max-width: 90vw; /* 90% of viewport width */
+  max-width: 90vw;
   width: auto;
-  margin: 30px auto; /* center with some vertical spacing */
+  margin: 30px auto;
 }
 
-/* Style modal images to scale proportionally */
 .modal-image {
   display: block;
   max-width: 100%;
+  max-height: 80vh; /* max height = 80% of viewport height */
   height: auto;
   margin: 0 auto;
 }
-
