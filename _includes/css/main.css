@@ -326,13 +326,15 @@ section.success {
     transition: all .3s ease-in-out;
 }
 
-.btn-outline:hover,
-.btn-outline:focus,
-.btn-outline:active,
-.btn-outline.active {
-    border: solid 2px #fff;
-    color: #fff !important;
-    background: #fff;
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active {
+  background-color: white !important;
+  color: #28a745 !important;
+  border-color: #28a745 !important;
+  box-shadow: none !important;
+  background-image: none !important;
 }
 
 .floating-label-form-group {
@@ -623,13 +625,4 @@ footer .footer-below {
 
 
 
-.btn-success:hover,
-.btn-success:focus,
-.btn-success:active,
-.btn-success.active {
-  background-color: white !important;
-  color: inherit !important;
-  border-color: inherit !important;
-  /* optionally add: */
-  box-shadow: none !important;
-}
+
