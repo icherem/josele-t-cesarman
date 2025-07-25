@@ -484,28 +484,30 @@ footer .footer-below {
 }
 
 /* change size when clicked */
-
+/* Make modal container bigger */
 .modal-dialog {
-  max-width: 90vw;
+  max-width: 95vw;
   width: auto;
-  margin: 30px auto;
   height: auto;
-  max-height: 90vh; /* allow modal height up to 90% viewport */
-  overflow: hidden; /* prevent scrollbars */
+  max-height: 95vh;
+  margin: 30px auto;
 }
 
+/* Modal content fills modal-dialog */
 .portfolio-modal .modal-content {
-  height: 100%;
-  max-height: 90vh;
-  overflow: hidden;
+  height: auto;
+  max-height: 95vh;
   padding: 20px 40px 40px;
+  overflow: hidden;
+  text-align: center;
 }
 
+/* Image fills as much space as possible inside modal */
 .modal-image {
-  display: block;
   max-width: 100%;
-  max-height: 85vh; /* max image height 85% viewport */
+  max-height: 90vh;
   height: auto;
   margin: 0 auto;
+  display: block;
   object-fit: contain;
 }
