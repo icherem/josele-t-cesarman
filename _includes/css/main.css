@@ -500,3 +500,28 @@ footer .footer-below {
   object-fit: contain;
   display: inline-block;
 }
+
+
+
+
+/*fix close on mobile */
+
+@media (max-width: 767px) {
+  .portfolio-modal .close-modal {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    z-index: 9999;
+  }
+
+  .portfolio-modal .close-modal .lr {
+    margin-left: 19px;
+    height: 40px;
+  }
+
+  .portfolio-modal .close-modal .lr .rl {
+    height: 40px;
+  }
+}
+
