@@ -483,18 +483,29 @@ footer .footer-below {
     -webkit-transform: translateZ(0);
 }
 
-
+/* change size when clicked */
 
 .modal-dialog {
   max-width: 90vw;
   width: auto;
   margin: 30px auto;
+  height: auto;
+  max-height: 90vh; /* allow modal height up to 90% viewport */
+  overflow: hidden; /* prevent scrollbars */
+}
+
+.portfolio-modal .modal-content {
+  height: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  padding: 20px 40px 40px;
 }
 
 .modal-image {
   display: block;
   max-width: 100%;
-  max-height: 80vh; /* max height = 80% of viewport height */
+  max-height: 85vh; /* max image height 85% viewport */
   height: auto;
   margin: 0 auto;
+  object-fit: contain;
 }
