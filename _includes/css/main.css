@@ -432,13 +432,13 @@ footer .footer-below {
     font-size: 20px;
     line-height: 45px;
 }
-
+/*
 .btn:focus,
 .btn:active,
 .btn.active {
     outline: 0;
 }
-
+*/
 .scroll-top {
     z-index: 1049;
     position: fixed;
