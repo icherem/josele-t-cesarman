@@ -252,32 +252,40 @@ section.success {
     }
 }
 
-/* Flexbox Portfolio Grid */
+/* Masonry Portfolio Grid */
 @media (min-width: 640px) {
-    .portfolio-flex-grid .portfolio-flex-row {
-      display: flex;
-      flex-flow: row wrap;
-      align-items: stretch;
-      justify-content: space-between;
-    }
-    .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
-      flex: 1 0 49%;
-      max-width: 49%;
-    }
+  .portfolio-flex-grid .portfolio-flex-row {
+    column-count: 2;
+    column-gap: 15px;
   }
-  @media (min-width: 960px) {
-    .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
-      flex: 1 0 32%;
-      max-width: 32%;
-    }
+  .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
   }
-  /* A large grid might need four columns on widescreen layouts */
-  /* @media (min-width: 1380px) {
-    .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
-      flex: 1 0 23.5%;
-      max-width: 23.5%;
-    }
-  } */
+}
+@media (min-width: 960px) {
+  .portfolio-flex-grid .portfolio-flex-row {
+    column-count: 3;
+    column-gap: 20px;
+  }
+  .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
+    margin-bottom: 20px;
+  }
+}
+
+/* Uncomment for 4 columns on very wide screens */
+/*
+@media (min-width: 1380px) {
+  .portfolio-flex-grid .portfolio-flex-row {
+    column-count: 4;
+    column-gap: 20px;
+  }
+  .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
+    margin-bottom: 20px;
+  }
+}
+*/
 
 .btn-outline {
     margin-top: 15px;
@@ -501,9 +509,6 @@ footer .footer-below {
   display: inline-block;
 }
 
-
-
-
 /*fix close on mobile */
 
 @media (max-width: 767px) {
@@ -524,4 +529,3 @@ footer .footer-below {
     height: 40px;
   }
 }
-
