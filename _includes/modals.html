@@ -15,7 +15,11 @@
           <div class="modal-body">
             <h2>{{ post.title }}</h2>
             <hr class="star-primary">
-            <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+            <div style="overflow-x: auto; text-align: center;">
+                <img src="img/portfolio/{{ post.img }}" 
+                     style="display: block; margin: 0 auto; max-width: none; width: auto; height: auto;" 
+                     alt="{{ post.alt }}">
+            </div>
             {% if post.description %}
             <p>{{ post.description }}</p>
             {% endif %}
