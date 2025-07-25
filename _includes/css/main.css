@@ -1,3 +1,4 @@
+
 /*!
  * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
@@ -528,4 +529,45 @@ footer .footer-below {
   .portfolio-modal .close-modal .lr .rl {
     height: 40px;
   }
+}
+
+
+
+
+.close-modal {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1051; /* Above modal backdrop and modal */
+}
+
+.close-modal .lr,
+.close-modal .rl {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.close-modal .lr::before,
+.close-modal .rl::before {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 50px;
+  background-color: #222;
+  top: 0;
+  left: 24px;
+}
+
+.close-modal .lr::before {
+  transform: rotate(45deg);
+}
+
+.close-modal .rl::before {
+  transform: rotate(-45deg);
 }
