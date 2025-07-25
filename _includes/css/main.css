@@ -331,7 +331,7 @@ section.success {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: #{{ site.color.primary }};
+    color: #fff;
     background: #fff;
 }
 
@@ -621,10 +621,3 @@ footer .footer-below {
   margin-bottom: 0;
 }
 
-
-.btn-outline:hover,
-.btn-outline:focus,
-.btn-outline:active,
-.btn-outline.active {
-    color: #fff ;
-}
