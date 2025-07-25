@@ -510,7 +510,7 @@ footer .footer-below {
   display: inline-block;
 }
 
-/*fix close on mobile */
+/*fix close on mobile 
 
 @media (max-width: 767px) {
   .portfolio-modal .close-modal {
@@ -530,77 +530,39 @@ footer .footer-below {
     height: 40px;
   }
 }
+*/
 
-
-
-
-.close-modal {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  z-index: 1051; /* Above modal backdrop and modal */
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
 }
 
-.close-modal .lr,
-.close-modal .rl {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 0;
-  right: 0;
+.portfolio-modal .close-modal:hover {
+    opacity: .3;
 }
 
-.close-modal .lr::before,
-.close-modal .rl::before {
-  content: '';
-  position: absolute;
-  width: 3px;
-  height: 50px;
-  background-color: #222;
-  top: 0;
-  left: 24px;
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 75px;
+    margin-left: 35px;
+    background-color: #{{ site.color.secondary }};
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
-.close-modal .lr::before {
-  transform: rotate(45deg);
-}
-
-.close-modal .rl::before {
-  transform: rotate(-45deg);
-}
-
-.close-modal {
-  position: absolute;
-  width: 75px;
-  height: 75px;
-  top: 25px;
-  right: 25px;
-  cursor: pointer;
-  background-color: transparent;
-  z-index: 1051;
-}
-
-.close-modal .lr {
-  height: 75px;
-  width: 1px;
-  margin-left: 35px;
-  background-color: #222;
-  transform: rotate(45deg);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.close-modal .rl {
-  height: 75px;
-  width: 1px;
-  margin-left: 35px;
-  background-color: #222;
-  transform: rotate(-45deg);
-  position: absolute;
-  top: 0;
-  left: 0;
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 75px;
+    background-color: #{{ site.color.secondary }};
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
