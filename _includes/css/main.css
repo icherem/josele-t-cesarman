@@ -340,7 +340,7 @@ section.success {
 .btn-success.active {
   background-color: white !important;
   color: white !important;
-  border-color: #28a745 !important;
+  border-color: white !important;
   box-shadow: none !important;
   background-image: none !important;
 }
