@@ -607,3 +607,24 @@ footer .footer-below {
 
 
 
+/* Masonry-style grid using CSS Grid */
+.portfolio-flex-grid .portfolio-flex-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-flow: dense;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.portfolio-flex-grid .portfolio-flex-item {
+  break-inside: avoid;
+  width: 100%;
+}
+
+.portfolio-flex-grid .portfolio-flex-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
