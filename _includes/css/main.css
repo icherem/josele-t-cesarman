@@ -25,6 +25,14 @@ a.active:not(.btn) {
     outline: 0;
     color: #{{ site.color.primary }};
 }
+a.btn,
+a.btn:hover,
+a.btn:focus,
+a.btn:active,
+a.btn.active {
+  color: white !important;
+  outline: 0 !important;
+}
 
 h1,
 h2,
