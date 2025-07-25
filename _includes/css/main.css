@@ -571,3 +571,36 @@ footer .footer-below {
 .close-modal .rl::before {
   transform: rotate(-45deg);
 }
+
+.close-modal {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 1051;
+}
+
+.close-modal .lr {
+  height: 75px;
+  width: 1px;
+  margin-left: 35px;
+  background-color: #222;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.close-modal .rl {
+  height: 75px;
+  width: 1px;
+  margin-left: 35px;
+  background-color: #222;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
