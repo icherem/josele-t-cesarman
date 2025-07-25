@@ -1,4 +1,4 @@
-<!-- Portfolio Grid Section 
+<!-- Portfolio Grid Section -->
 <section id="portfolio">
   <div class="container portfolio-flex-grid">
     <div class="row">
@@ -19,42 +19,6 @@
           <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
         </a>
       </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
--->
-<!-- Portfolio Grid Section -->
-<section id="portfolio">
-  <div class="container portfolio-flex-grid">
-    <div class="row">
-      <div class="col-lg-12 text-center" style="margin-bottom: 30px;">
-        <h2>Galería</h2>
-        <!-- <hr class="star-primary"> -->
-      </div>
-    </div>
-    <div class="portfolio-flex-row">
-      {% assign columns = 3 %}
-      {% assign total_posts = site.posts | size %}
-      {% assign rows = total_posts | divided_by: columns | ceil %}
-
-      {% for r in (0..rows-1) %}
-        {% for c in (0..columns-1) %}
-          {% assign index = r | times: columns | plus: c %}
-          {% if index < total_posts %}
-            {% assign post = site.posts[index] %}
-            <div class="portfolio-flex-item portfolio-item">
-              <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-                <div class="caption">
-                  <div class="caption-content">
-                    <i class="fa fa-search-plus fa-3x"></i>
-                  </div>
-                </div>
-                <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
-              </a>
-            </div>
-          {% endif %}
-        {% endfor %}
       {% endfor %}
     </div>
   </div>
