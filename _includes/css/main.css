@@ -637,3 +637,9 @@ footer .footer-below {
 .btn:active {
   color: #fff !important;
 }
+a.btn,
+a.btn:hover,
+a.btn:focus,
+a.btn:active {
+  color: #fff !important;
+}
