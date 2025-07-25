@@ -621,3 +621,15 @@ footer .footer-below {
   margin-bottom: 0;
 }
 
+
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active {
+  background-color: white !important;
+  color: inherit !important;
+  border-color: inherit !important;
+  /* optionally add: */
+  box-shadow: none !important;
+}
