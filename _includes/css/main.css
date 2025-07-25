@@ -253,7 +253,7 @@ section.success {
     }
 }
 
-/* Masonry Portfolio Grid */
+/* Masonry Portfolio Grid 
 @media (min-width: 640px) {
   .portfolio-flex-grid .portfolio-flex-row {
     column-count: 2;
@@ -274,7 +274,36 @@ section.success {
     margin-bottom: 20px;
   }
 }
+*/
 
+/* Flexbox Portfolio Grid */
+.portfolio-flex-grid .portfolio-flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* spacing between items */
+  justify-content: space-between;
+}
+
+.portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
+  flex: 1 0 100%; /* full width on mobile */
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 640px) {
+  .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
+    flex: 1 0 48%; /* two columns */
+    max-width: 48%;
+  }
+}
+
+@media (min-width: 960px) {
+  .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
+    flex: 1 0 30%; /* three columns */
+    max-width: 30%;
+    margin-bottom: 20px;
+  }
+}
 /* Uncomment for 4 columns on very wide screens */
 /*
 @media (min-width: 1380px) {
