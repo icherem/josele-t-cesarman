@@ -482,3 +482,22 @@ footer .footer-below {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
 }
+
+
+
+
+/* Make modal wider to show bigger images */
+.modal-dialog {
+  max-width: 90vw; /* 90% of viewport width */
+  width: auto;
+  margin: 30px auto; /* center with some vertical spacing */
+}
+
+/* Style modal images to scale proportionally */
+.modal-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
