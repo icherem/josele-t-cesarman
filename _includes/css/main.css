@@ -17,11 +17,11 @@ p.small {
     font-size: 16px;
 }
 
-a,
-a:hover,
-a:focus,
-a:active,
-a.active {
+a:not(.btn),
+a:not(.btn):hover,
+a:not(.btn):focus,
+a:not(.btn):active,
+a.active:not(.btn) {
     outline: 0;
     color: #{{ site.color.primary }};
 }
