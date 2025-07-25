@@ -603,3 +603,23 @@ footer .footer-below {
   box-shadow: none;
   border: none;
 }
+
+
+
+
+
+
+.portfolio-flex-item img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-flex-grid .portfolio-flex-row {
+  gap: 15px;
+}
+
+.portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
+  margin-bottom: 0;
+}
