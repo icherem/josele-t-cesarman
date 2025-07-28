@@ -24,3 +24,16 @@
 <!-- Disqus Stuff -->
 {% include js_disqus.html %}
 {% endif %}
+
+<!-- Language Toggle Script -->
+<script>
+  function setLanguage(lang) {
+    document.querySelectorAll('.lang').forEach(el => {
+      el.style.display = el.classList.contains('lang-' + lang) ? '' : 'none';
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    setLanguage('es'); // default to Spanish
+  });
+</script>
