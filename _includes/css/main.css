@@ -652,3 +652,21 @@ a.btn:active {
 .testimonios p {
   text-align: justify;
 }
+
+
+/* Subtle green overlay on hover */
+.portfolio-link .caption {
+  background: rgba(168, 185, 72, 0.12) !important; /* your green with low opacity */
+  opacity: 1 !important;
+  transition: background 0.3s ease;
+}
+
+/* Remove magnifying glass icon overlay */
+.portfolio-link .caption-content {
+  display: none !important;
+}
+
+/* Change cursor */
+a.portfolio-link:hover {
+  cursor: pointer !important;
+}
