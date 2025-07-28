@@ -648,3 +648,7 @@ a.btn:active {
 .testimonios {
     font-size: 18px;
 }
+
+.testimonios p {
+  text-align: justify;
+}
