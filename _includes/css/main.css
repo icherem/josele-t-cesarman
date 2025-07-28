@@ -643,3 +643,8 @@ a.btn:focus,
 a.btn:active {
   color: #fff !important;
 }
+
+
+.testimonios {
+    font-size: 18px;
+}
