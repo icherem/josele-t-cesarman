@@ -27,12 +27,37 @@
 
 <!-- Language Toggle Script -->
 <script>
-  function setLanguage(lang) {
+   function setLanguage(lang) {
+    // Show/hide language-specific text
     document.querySelectorAll('.lang').forEach(el => {
       el.style.display = el.classList.contains('lang-' + lang) ? '' : 'none';
     });
+
+    // Placeholders for form inputs and textarea
+    const placeholders = {
+      es: {
+        name: 'Nombre',
+        email: 'Correo Electrónico',
+        message: 'Mensaje'
+      },
+      en: {
+        name: 'Name',
+        email: 'Email Address',
+        message: 'Message'
+      }
+    };
+
+    // Update placeholders dynamically
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    if (nameInput) nameInput.placeholder = placeholders[lang].name;
+    if (emailInput) emailInput.placeholder = placeholders[lang].email;
+    if (messageInput) messageInput.placeholder = placeholders[lang].message;
   }
 
+  // Set default language on page load
   document.addEventListener('DOMContentLoaded', () => {
     setLanguage('es'); // default to Spanish
   });
