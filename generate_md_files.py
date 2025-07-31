@@ -1,4 +1,3 @@
-
 import os
 
 output_dir = "_posts"
@@ -31,11 +30,12 @@ for group, count in groups:
     for img_num in range(1, count + 1):
         filename = f"2025-07-29-{modal_id}.md"
         filepath = os.path.join(output_dir, filename)
-        content = template.format(modal_id=modal_id, img=img_num, alt=group)
+        img_path = f"{group}/{img_num}"
+        content = template.format(modal_id=modal_id, img=img_path, alt=group)
 
         with open(filepath, "w") as f:
             f.write(content)
 
-        print(f"Created {filename} | modal-id: {modal_id}, img: {img_num}.jpg, alt: {group}")
+        print(f"Created {filename} | modal-id: {modal_id}, img: {img_path}.jpg, alt: {group}")
         modal_id += 1
 
