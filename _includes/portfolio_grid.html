@@ -27,7 +27,7 @@
 </section>
 -->
 
-<!-- Portfolio Grid Section -->
+<!-- Portfolio Grid Section 
 <section id="portfolio">
   <div class="container portfolio-flex-grid">
     {% assign groups = "paisajes,rincones,collage,tarot,ny,montañas" | split: "," %}
@@ -67,4 +67,62 @@
       </div>
     {% endfor %}
   </div>
+</section> -->
+
+<!-- Portfolio Grid Section -->
+<section id="portfolio">
+  <div class="container portfolio-flex-grid">
+    {% assign groups = "paisajes,rincones,collage,tarot,ny,montañas" | split: "," %}
+    {% for group in groups %}
+      {% case group %}
+        {% when "paisajes" %}
+          {% assign title_es = "Paisajes" %}
+          {% assign title_en = "Landscapes" %}
+        {% when "rincones" %}
+          {% assign title_es = "Rincones" %}
+          {% assign title_en = "Corners" %}
+        {% when "collage" %}
+          {% assign title_es = "Collage" %}
+          {% assign title_en = "Collage" %}
+        {% when "tarot" %}
+          {% assign title_es = "Cartas del tarot" %}
+          {% assign title_en = "Tarot Cards" %}
+        {% when "ny" %}
+          {% assign title_es = "Nueva York" %}
+          {% assign title_en = "New York" %}
+        {% when "montañas" %}
+          {% assign title_es = "Acantilados" %}
+          {% assign title_en = "Cliffs" %}
+      {% endcase %}
+      
+      <div class="row" style="margin-bottom: 40px;">
+        <div class="col-lg-12 text-center">
+          <br>
+          <h2 class="text-uppercase">
+            <span class="lang lang-es">{{ title_es }}</span>
+            <span class="lang lang-en" style="display:none;">{{ title_en }}</span>
+          </h2>
+        </div>
+      </div>
+      
+      <div class="portfolio-flex-row">
+        {% assign group_posts = site.posts | where_exp: "post", "post.img contains group" | sort: 'modal-id' %}
+        {% for post in group_posts %}
+          {% unless post.hidden %}
+          <div class="portfolio-flex-item portfolio-item">
+            <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+              <div class="caption">
+                <div class="caption-content">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+            </a>
+          </div>
+          {% endunless %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
 </section>
+
