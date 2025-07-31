@@ -1,3 +1,4 @@
+
 import os
 
 output_dir = "_posts"
@@ -7,8 +8,8 @@ template = """---
 layout: default
 modal-id: {modal_id}
 date: 2025-07-25
-img: {img}
-alt: "Luna"
+img: {img}.jpg
+alt: "{alt}"
 project-date: July 2025
 category: Oil Painting
 description: "Oleo"
@@ -16,25 +17,25 @@ description: "Oleo"
 """
 
 groups = [
-    ("collage", 10),
+    ("paisajes", 21),
+    ("rincones", 9),
+    ("collage", 12),
     ("tarot", 7),
-    ("naturaleza", 13),
+    ("ny", 10),
     ("montañas", 11),
 ]
 
-start_index = 32
-current_index = start_index
+modal_id = 1
 
 for group, count in groups:
-    for i in range(1, count + 1):
-        filename = f"2025-07-29-{current_index}.md"
+    for img_num in range(1, count + 1):
+        filename = f"2025-07-29-{modal_id}.md"
         filepath = os.path.join(output_dir, filename)
-        img_path = f"{group}/{i}.jpeg"
-        content = template.format(modal_id=current_index, img=img_path)
+        content = template.format(modal_id=modal_id, img=img_num, alt=group)
 
         with open(filepath, "w") as f:
             f.write(content)
 
-        print(f"Created file: {filename} with img: {img_path}")
-        current_index += 1
+        print(f"Created {filename} | modal-id: {modal_id}, img: {img_num}.jpg, alt: {group}")
+        modal_id += 1
 
