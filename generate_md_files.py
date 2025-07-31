@@ -16,12 +16,12 @@ description: "Oleo"
 """
 
 groups = [
-    ("paisajes", 21),
-    ("rincones", 9),
+    ("paisajes", 10),
+    ("rincones", 15),
     ("collage", 12),
     ("tarot", 7),
     ("ny", 10),
-    ("montañas", 11),
+    ("montañas", 10),
 ]
 
 modal_id = 1
